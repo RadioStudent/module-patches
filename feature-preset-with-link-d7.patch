@@ -1,0 +1,36 @@
+--- image.inc.orig	2012-06-19 12:01:22.475052662 +0200
++++ image.inc	2012-06-19 12:16:35.675037006 +0200
+@@ -32,6 +32,9 @@
+     $insert_styles['image_' . $style['name']] = array(
+       'label' => t($style['name']),
+     );
++    $insert_styles['image_' . $style['name'] . '___link'] = array(
++	      'label' => t("@preset linked to image", array('@preset' => $style['name']))
++    );
+   }
+   return $insert_styles;
+ }
+@@ -41,7 +44,21 @@
+  */
+ function image_insert_content($item, $style, $widget) {
+   $style_name = preg_replace('/^image_/', '', $style['name']);
+-  return theme(array('image_insert_image__' . str_replace('-', '_', $style_name), 'image_insert_image'), array('item' => $item, 'widget' => $widget, 'style_name' => $style_name));
++  $linkpos = strpos($style_name, '___link');
++  if ($linkpos > 0) {
++    $preset_name = substr($style_name, 0, $linkpos);
++  }
++  $style_name = preg_replace('/___link$/', '', $style_name);
++  $img = theme(array('image_insert_image__' . str_replace('-', '_', $style_name), 'image_insert_image'), array('item' => $item, 'widget' => $widget, 'style_name' => $style_name));
++
++  if ($linkpos > 0) {
++    return l($img, insert_create_url($item['uri']), array(
++        'html' => TRUE,
++        'attributes' => array('class' => $style_name),
++        'absolute' => TRUE
++      ));
++  }
++
++  return $img;
+ }
+ 
+ /**

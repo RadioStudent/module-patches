@@ -17,3 +17,8 @@ Allows pulling filter value from a view argument (in URL). This is used to gener
 *Conditional Fields 3.0-alpha1*
 
 Fixes issue where tags are not stored because the taxonomy fields are handled by Conditional Fields module. See entire discussion [here](https://drupal.org/node/1542706).
+
+###2175753-jquery-fix.patch
+*Autocomplete Deluxe 7.x-2.x-dev*
+
+Fixes errors with versions of jQuery newer than 1.5, allows us to use 1.10. Patch was found [here](https://drupal.org/node/2175753).

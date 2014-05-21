@@ -1,0 +1,27 @@
+
+<!-- saved from url=(0056)https://drupal.org/files/issues/2175753-jquery-fix.patch -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"></style></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">diff --git a/autocomplete_deluxe.js b/autocomplete_deluxe.js
+index 2ef087f..78855d0 100755
+--- a/autocomplete_deluxe.js
++++ b/autocomplete_deluxe.js
+@@ -119,7 +119,7 @@
+   };
+ 
+   Drupal.autocomplete_deluxe.Widget.prototype.init = function(settings) {
+-    if ($.browser.msie &amp;&amp; $.browser.version === "6.0") {
++    if ($.browser &amp;&amp; $.browser.msie &amp;&amp; $.browser.version === "6.0") {
+       return;
+     }
+ 
+@@ -318,10 +318,6 @@
+     var self = this;
+     this.valueForm = value_input;
+ 
+-    // Override the resize function, so that the suggestion list doesn't resizes
+-    // all the time.
+-    jqObject.data("autocomplete")._resizeMenu = function()  {};
+-
+     jqObject.show();
+ 
+     value_container.hide();
+</pre></body></html>

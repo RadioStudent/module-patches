@@ -22,3 +22,4 @@ Fixes issue where tags are not stored because the taxonomy fields are handled by
 *Autocomplete Deluxe 7.x-2.x-dev*
 
 Fixes errors with versions of jQuery newer than 1.5, allows us to use 1.10. Patch was found [here](https://drupal.org/node/2175753).
+Fixed in commit ddf989565af1eefa0faf8eb520b8d93bc5c5c6d2 of 7.x-2.x-dev on 2014-09-08, so updating to that or newer version does not need this anymore.

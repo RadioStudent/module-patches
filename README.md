@@ -11,7 +11,7 @@ Automatically adds link to original to images inserted into posts with Insert mo
 ###views-357082-172-7.x-3.x-dev.patch
 *Views 3.7*
 
-Allows pulling filter value from a view argument (in URL). This is used to generate the view that features all nodes from a single author (whether he is node author or present in the additional authors field). Post with patch and further discussion is [here](https://drupal.org/node/357082).
+Allows pulling filter value from a view argument (in URL). This is used to generate the view that features all nodes from a single author (whether he is node author or present in the additional authors field). Post with patch and further discussion is [here](https://drupal.org/node/357082). Works on Views 7.x-3.8 too.
 
 ###conditional-fields-1542706-values-not-saving-72.patch
 *Conditional Fields 3.0-alpha1*

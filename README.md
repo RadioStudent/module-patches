@@ -6,7 +6,7 @@ A collection of patches for Drupal modules currently in use on Radio Student web
 ###feature-preset-with-link-d7.patch
 *Insert 1.3*
 
-Automatically adds link to original to images inserted into posts with Insert module. Post with issue and patch is [here](https://drupal.org/node/1542706).
+Automatically adds link to original to images inserted into posts with Insert module. Post with issue and patch is [here](https://www.drupal.org/node/1163080).
 
 ###views-357082-172-7.x-3.x-dev.patch
 *Views 3.7*
